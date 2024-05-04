@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "celery-tool"
+version = "0.0.1"
+dependencies = [
+    "Django>=4.2",
+    "celery>=5.3",
+]
+requires-python = ">= 3.8"
+authors = [
+  {name = "Ali Tabatabaei", email = "ali79taba@gmail.com"},
+]
+maintainers = [
+  {name = "Ali Tabatabaei", email = "ali79taba@gmail.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["celery", "django", "tool", "task", "pipeline", "chunkify"]
+
+[project.urls]
+Repository = "https://github.com/salitaba/celery-tools.git"
+Issues = "https://github.com/salitaba/celery-tools/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/celery-tool"]
+
